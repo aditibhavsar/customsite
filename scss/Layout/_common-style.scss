@@ -1,0 +1,1453 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// first black line
+
+.firstD {
+
+    width: $vw100;
+    height: $vh10;
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin BTN() {
+    width: $vw8;
+    height: $vh4;
+    text-align: center;
+    font-size: $px15;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid $black;
+    border-radius: 6px;
+    padding-top: $px15;
+
+}
+
+.btnE {
+
+    // @include BTN();
+    width: 237px;
+    height: 67px;
+    color: $green;
+    background-color: $black;
+    margin-left: 1vw;
+    padding: 0px;
+}
+
+.btnB {
+    @include BTN();
+    color: $white;
+    font-size: large;
+    text-align: center;
+    background-color: $green;
+    margin-right: $vw1;
+    margin-top: $px11;
+}
+
+// second offwhite line
+
+.secondline {
+
+    width: $vw100;
+    height: $vh6;
+    background-color: $offwhite;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: $vw1;
+    margin-right: $vw1;
+}
+
+li {
+    cursor: pointer;
+}
+
+.views {
+    width: $per400;
+    height: $px30;
+    padding-top: 9px;
+    background-color: $darkbrown;
+    border-radius: 100%;
+    text-align: center;
+    display: inline-block;
+
+}
+
+.views:hover {
+    transform: scale(1);
+    background-color: $darkgreen;
+    cursor: pointer;
+}
+
+input {
+    background-color: $offwhite;
+    height: $vh4;
+    width: $vw15;
+    align-items: end;
+}
+
+// navbar
+
+#nav {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: $px5;
+}
+
+.logo2 {
+
+    width: $vw15;
+    height: $vh8 ;
+    border: $px1 solid $white;
+    cursor: pointer;
+}
+
+#ul {
+    height: 16px;
+    width: 500px;
+    cursor: pointer;
+}
+
+
+.btnD {
+
+    @include BTN();
+    width: $vw15;
+    height: $vh4;
+    background-color: $orange;
+    border: none;
+    color: $black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btnD:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+// home image
+
+@mixin font() {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: $white;
+}
+
+.homeimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+
+    h1 {
+        @include font();
+        font-size: 40px;
+        margin-left: 90px;
+    }
+
+    h4 {
+        @include font();
+        font-size: 27px;
+        margin-left: 90px;
+    }
+
+    p {
+        @include font();
+        font-size: 18px;
+        margin-left: 90px;
+
+    }
+}
+
+.homebtn {
+    text-decoration: none;
+    text-align: left;
+    margin-left: 90px;
+    margin-top: 39px;
+    color: #fff;
+    display: inline-block;
+    width: 131px;
+    font-size: larger;
+    border: 1px solid $green;
+    padding: 9px;
+    border-radius: 5px;
+    background-color: $green;
+}
+
+.homebtn:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+// second section
+
+// box style
+@mixin box() {
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    margin-top: 40px;
+    display: inline;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.blue {
+    @include box();
+    background-color: $blue;
+}
+
+#WD {
+    margin-left: 32px;
+    margin-top: 42px;
+}
+
+.blue:hover {
+    transform: scale(1);
+    background-color: $darkgreen;
+    cursor: pointer;
+}
+
+.orange {
+
+    @include box();
+    background-color: $orange;
+}
+
+#F {
+    margin-left: 32px;
+    margin-top: 42px;
+}
+
+.orange:hover {
+    transform: scale(1);
+    background-color: $darkgreen;
+    cursor: pointer;
+}
+
+.green {
+
+    @include box();
+    background-color: $green;
+}
+
+#TEM {
+    margin-left: 32px;
+    margin-top: 42px;
+}
+
+.green:hover {
+    transform: scale(1);
+    background-color: $darkgreen;
+    cursor: pointer;
+}
+
+.darkbrown {
+    @include box();
+    background-color: $darkbrown;
+}
+
+#PT {
+    margin-left: 32px;
+    margin-top: 42px;
+}
+
+.darkbrown:hover {
+    transform: scale(1);
+    background-color: $darkgreen;
+    cursor: pointer;
+}
+
+// text style
+@mixin text() {
+
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: $black;
+
+}
+
+#text {
+
+    @include text();
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+
+// line style
+@mixin line() {
+
+    width: 90px;
+    height: 2px;
+    margin-top: 20px;
+}
+
+#lines {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.lineB {
+    @include line();
+    background-color: $blue;
+}
+
+.lineO {
+    @include line();
+    background-color: $orange;
+}
+
+.lineG {
+    @include line();
+    background-color: $green;
+}
+
+.lineDB {
+    @include line();
+    background-color: $darkbrown;
+}
+
+#h4 {
+    @include text();
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.first {
+    margin-left: 70px;
+}
+
+.second {
+
+    margin-left: 90px;
+}
+
+.third {
+    margin-right: 70px;
+}
+
+.four {
+    margin-right: 60px;
+}
+
+//  third section 
+#white {
+
+    width: $vw100;
+    height: $vh120;
+    background-color: $div;
+    border: 2px solid $border;
+    margin-top: 35px;
+    display: inline-block;
+
+    h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: large;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+.Greenline {
+    width: 90px;
+    height: 2px;
+    margin-top: 30px;
+    background-color: $green;
+    margin-left: 730px;
+    margin-top: 20px;
+    width: 50px;
+}
+
+#card {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    img {
+        width: 400px;
+    }
+}
+
+@mixin cardtext() {
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: $cardtext;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.firstcard {
+    @include cardtext();
+}
+
+.firstcard:hover {
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+.secondcard {
+    @include cardtext();
+}
+
+.secondcard:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+.thirdcard {
+    @include cardtext();
+}
+
+.thirdcard:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+.fourcard {
+    @include cardtext();
+}
+
+.fourcard:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+.fivecard {
+    @include cardtext();
+}
+
+.fivecard:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+.sixcard {
+    @include cardtext();
+}
+
+.sixcard:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+#cardbtn {
+
+    padding: 10px;
+    width: 200px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: $offblack;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    margin-left: 720px
+}
+
+#foursection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.firstDiv {
+    justify-content: center;
+
+    p {
+        font-size: xx-large;
+    }
+
+    a {
+        text-decoration: none;
+        border: 2px solid green;
+        color: green;
+        background-color: #E8F5E9;
+        padding: 8px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+}
+
+.lightGreen:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+.secondDiv {
+    h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+        font-size: larger;
+        margin-top: 15px;
+        margin-bottom: 17px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: larger;
+        color: black;
+    }
+}
+
+.lightGreenline {
+    width: 90px;
+    height: 2px;
+    margin-top: 30px;
+    background-color: $green;
+    margin-top: 10px;
+    width: 50px;
+    align-items: center;
+}
+
+#icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+
+    l {
+        word-spacing: 1px;
+    }
+}
+
+.thirdDiv {
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    a {
+        font-size: larger;
+        text-decoration: none;
+        margin-left: 74px;
+        color: green;
+    }
+
+    p {
+        margin-top: 23px;
+        font-size: large;
+        margin-bottom: 30px;
+    }
+}
+
+// five section
+@mixin button1() {
+    width: 300px;
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    margin-left: 640px;
+}
+
+#IMG {
+    h1 {
+        font-size: xxx-large;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        @include button1();
+    }
+}
+
+.mail {
+    width: 150px;
+    margin-top: 150px;
+    margin-left: 690px;
+}
+
+.Greenline_onimg {
+    width: 90px;
+    height: 2px;
+    margin-top: 30px;
+    background-color: $green;
+    margin-top: 10px;
+    width: 50px;
+    margin-left: 750px;
+}
+
+#form {
+    margin-left: 520px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+
+    input {
+        width: 250px;
+        background-color: white;
+        color: black;
+        height: 35px;
+        border-radius: 5px;
+        padding: 4px;
+    }
+}
+
+// six section
+#sixsecotion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#sixul {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+#textsix {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+
+    h1 {
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: medium;
+        margin-bottom: 20px;
+    }
+}
+
+.DIV {
+    h1 {
+        font-size: larger;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: large;
+        margin-bottom: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        color: green;
+        font-size: large;
+    }
+
+}
+
+.Greenlinesix {
+    width: 90px;
+    height: 2px;
+    margin-top: 30px;
+    background-color: $green;
+    margin-top: 10px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.TIMG {
+    margin-top: 40px;
+}
+
+.ICON {
+    margin-top: 80px;
+}
+
+// div for seven section
+#sevenS {
+
+    width: $vw100;
+    height: $vh100;
+    background-color: $div;
+    border: 2px solid $border;
+    margin-top: 40px;
+}
+
+.textseven {
+    h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: large;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+}
+
+.Greenlineseven {
+    width: 90px;
+    height: 2px;
+    margin-top: 30px;
+    background-color: $green;
+    margin-left: 730px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 50px;
+}
+
+#cardseven {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    img {
+        width: 400px;
+    }
+}
+
+@mixin SevenCardh1() {
+    font-size: x-large;
+    margin-top: 15px;
+    color: #4CAF50;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@mixin SevenCardp() {
+
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@mixin SevenCarda() {
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4CAF50;
+}
+
+@mixin SevenCardh2() {
+
+    font-size: larger;
+    color: #4CAF50;
+    padding: 9px;
+    background-color: #F5F5F5;
+}
+
+.firstcardS {
+
+    border: 1px solid #EEEEEE;
+
+    h1 {
+        @include SevenCardh1();
+    }
+
+    p {
+        @include SevenCardp();
+    }
+
+    a {
+        @include SevenCarda();
+    }
+
+    h2 {
+        @include SevenCardh2();
+    }
+}
+
+.secondcardS {
+
+    border: 1px solid #EEEEEE;
+
+    h1 {
+        @include SevenCardh1();
+    }
+
+    p {
+        @include SevenCardp();
+    }
+
+    a {
+        @include SevenCarda();
+    }
+
+    h2 {
+        @include SevenCardh2();
+    }
+}
+
+.thirdcardS {
+
+    border: 1px solid #EEEEEE;
+
+    h1 {
+        @include SevenCardh1();
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        @include SevenCardp();
+    }
+
+    a {
+        @include SevenCarda();
+    }
+
+    h2 {
+        @include SevenCardh2();
+    }
+}
+
+// div for eight section
+#eightDiv {
+
+    display: flex;
+    // justify-content: space-evenly;
+    align-items: center;
+}
+
+.eightH1 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.eightH2 {
+    a {
+        text-decoration: none;
+        margin-left: 980px;
+        margin-top: 40px;
+        font-size: large;
+        color: green;
+    }
+}
+
+#Diveight {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.profiles {
+    position: relative;
+
+    img {
+
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    h2 {
+
+        position: absolute;
+        top: 10px;
+        left: -11px;
+        margin: -4px 59px;
+        color: white;
+        padding: 11px !important;
+    }
+}
+
+.texteight {
+    h1 {
+        font-size: x-large;
+        color: gray;
+        margin-bottom: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+    }
+
+    h2 {
+        font-size: large;
+        background-color: green;
+        width: 309px;
+        padding: 8px;
+        margin-left: 54px;
+        position: absolute;
+    }
+}
+
+.girlimg {
+
+    border: 1px solid gray;
+    border-radius: 45px;
+    position: relative;
+    z-index: 1;
+}
+
+.tagore {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    p {
+        font-size: smaller;
+    }
+}
+
+.Greenlineeight {
+
+    width: 90px;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: #EEEEEE;
+}
+
+.tagimg {
+
+    h1 {
+        font-size: x-large;
+        color: gray;
+    }
+
+    p {
+        font-size: large;
+        color: gray;
+    }
+}
+
+.quote {
+    width: 71px;
+    margin-top: 32px;
+    margin-left: 172px;
+}
+
+// section nine
+.headdingD {
+
+    h1 {
+        font-size: x-large;
+        margin-left: 353px;
+        margin-top: 27px;
+        font-weight: bold;
+        color: $white;
+    }
+}
+
+.stamp {
+    margin-top: 80px;
+    margin-left: 700px;
+}
+
+#iconD {
+
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+#W {
+    margin-left: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#S {
+    margin-left: 73px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#O {
+    margin-left: 77px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#C {
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#A {
+    margin-left: 74px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#T {
+    margin-left: 83px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@mixin h1eight() {
+
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 17px;
+    text-align: center;
+    margin-bottom: 14px;
+    color: $white;
+}
+
+@mixin peight() {
+
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+}
+
+@mixin h2eight() {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+}
+
+.water {
+
+    h1 {
+        @include h1eight();
+    }
+
+    p {
+        @include peight();
+    }
+
+    h2 {
+        @include h2eight();
+    }
+}
+
+.soil {
+
+    h1 {
+        @include h1eight();
+    }
+
+    p {
+        @include peight();
+    }
+
+    h2 {
+        @include h2eight();
+    }
+}
+
+.oxygen {
+
+    h1 {
+        @include h1eight();
+    }
+
+    p {
+        @include peight();
+    }
+
+    h2 {
+        @include h2eight();
+    }
+}
+
+.car {
+
+    h1 {
+        @include h1eight();
+    }
+
+    p {
+        @include peight();
+    }
+
+    h2 {
+        @include h2eight();
+    }
+}
+
+.air {
+
+    h1 {
+        @include h1eight();
+    }
+
+    p {
+        @include peight();
+    }
+
+    h2 {
+        @include h2eight();
+    }
+}
+
+.trees {
+
+    h1 {
+        @include h1eight();
+    }
+
+    p {
+        @include peight();
+    }
+
+    h2 {
+        @include h2eight();
+    }
+}
+
+.btnDiv {
+    p {
+        text-align: center;
+        font-size: x-large;
+        font-weight: bold;
+        margin-top: 82px;
+        margin-bottom: 40px;
+        color: white;
+    }
+}
+
+.eightbtn {
+
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    border: 1px solid;
+    border-color: black;
+    padding: 11px;
+    font-size: large;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 692px;
+}
+
+.eightbtn:hover {
+
+    transform: scale(1);
+    background-color: $offblack;
+    color: $white;
+    cursor: pointer;
+}
+
+// footer
+
+footer {
+
+    display: flex;
+    background-color: #212121;
+    justify-content: space-around;
+    height: 500px;
+
+}
+
+@mixin fh1() {
+
+    color: white;
+    font-size: large;
+    margin: 12px;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+@mixin fp() {
+    color: gray;
+    font-size: medium;
+    margin: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+@mixin fa() {
+
+    text-decoration: none;
+    color: gray;
+    font-size: large;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+.footfirst {
+    h1 {
+        @include fh1();
+    }
+
+    p {
+        @include fp();
+    }
+
+    a {
+        @include fa();
+    }
+}
+
+.Graylineeight {
+
+    width: 90px;
+    height: 2px;
+    background-color: gray;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+.footsecond {
+
+    h1 {
+        @include fh1();
+    }
+
+    p {
+        @include fp();
+    }
+}
+
+#FICON {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    align-items: baseline;
+}
+
+#G {
+    margin-left: 21px;
+}
+
+#T {
+    margin-left: 21px;
+}
+
+#I {
+    margin-left: 21px;
+}
+
+.footthird {
+
+    h1 {
+        @include fh1();
+    }
+
+    p {
+        @include fp();
+    }
+}
+
+#callicon {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#mailf {
+
+    margin-top: 20px;
+}
+
+#locf {
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#logpf {
+
+    margin-right: 71px;
+}
